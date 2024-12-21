@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <p id="output"></p>
+
+    <script>
+        // Number of terms in the Fibonacci series
+        let num = 10; // Change this number to generate more terms
+        let a = 0, b = 1, count = 0;
+        let result = [];
+
+        while (count < num) {
+            result.push(a);
+            let next = a + b;
+            a = b;
+            b = next;
+            count++;
+        }
+
+        // Display the result
+        document.getElementById('output').innerText = "Fibonacci Series: " + result.join(", ");
+    </script>
+</body>
+</html>
